@@ -1,0 +1,21 @@
+on: pull_request
+name: PR
+
+jobs:
+  gitHubActionForNpm:
+    name: Validating
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking out default branch
+        uses: actions/checkout@v1
+        with:
+          submodules: true
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Running yarn install, prettier and type checks
+        run: |
+          yarn install
+          yarn prettier-check
+          yarn type-check

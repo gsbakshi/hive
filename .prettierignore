@@ -1,0 +1,13 @@
+node_modules
+builds
+cordova
+web
+web/files
+app/node_modules
+app/version.json
+flow-typed
+app/dist
+app/main.prod.js
+extensions
+dll
+app/utils/js-webdav-client.js
